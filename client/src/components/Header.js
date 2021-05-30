@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Avatar } from '@material-ui/core';
-import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import SearchIcon from '@material-ui/icons/Search';
 import { useFeathers } from 'figbird';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';

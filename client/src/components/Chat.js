@@ -3,8 +3,8 @@
 import React, { useEffect, useRef } from 'react';
 import { InfoOutlined, StarBorderOutlined } from '@material-ui/icons';
 import styled from 'styled-components';
-import { useStore, useStoreState } from 'easy-peasy';
-import { useMutation, useFeathers, useFind } from 'figbird';
+import { useStoreState } from 'easy-peasy';
+import { useFind } from 'figbird';
 import ChatInput from './ChatInput';
 import ChatArea from './ChatArea';
 
@@ -33,7 +33,7 @@ function Chat() {
         <Header>
           <HeaderLeft>
             <h4>
-              <strong>#{data ? data[0].roomName : 'Error'}</strong>
+              <strong>#{data ? data[0].roomName : ''}</strong>
             </h4>
             <StarBorderOutlined />
           </HeaderLeft>

@@ -10,8 +10,8 @@ import { useStore } from 'easy-peasy';
 import SidebarOption from './SidebarOption';
 
 function Sidebar() {
-  const { create, loading } = useMutation('rooms');
-  const { data, status, error } = useFind('rooms', {
+  const { create } = useMutation('rooms');
+  const { data } = useFind('rooms', {
     allPages: true,
   });
   const userData = useStore().getState();
@@ -39,11 +39,6 @@ function Sidebar() {
         </SidebarInfo>
         <CreateIcon onClick={createRoom} />
       </SidebarHeader>
-      <SidebarOption Icon={QuestionAnswerIcon} title="Rooms" />
-      <SidebarOption Icon={PeopleIcon} title="People" />
-      <SidebarOption Icon={AddIcon} title="Add Room" onClick={createRoom} />
-      <hr />
-
       {data ? (
         data.map(e => (
           <SidebarOption title={e.roomName} key={e._id} roomID={e._id} />

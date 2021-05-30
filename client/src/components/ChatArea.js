@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import styled from 'styled-components';
-import { Avatar } from '@material-ui/core';
 
 function ChatArea({ dataAtrib }) {
   return (

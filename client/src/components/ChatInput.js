@@ -2,13 +2,13 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Button } from '@material-ui/core';
 import { useStore } from 'easy-peasy';
-import { useMutation, useFeathers } from 'figbird';
+import { useMutation } from 'figbird';
 
 function ChatInput({ roomName }) {
   const [inputRef, setinputRef] = useState('');
   const userData = useStore().getState().user.user;
   const roomID = useStore().getState().roomId;
-  const { create, loading, data } = useMutation('messages');
+  const { create } = useMutation('messages');
 
   // eslint-disable-next-line consistent-return
   const sendMessage = async e => {
