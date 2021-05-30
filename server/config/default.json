@@ -30,8 +30,8 @@
     "oauth": {
       "redirect": "http://localhost:3000/",
       "google": {
-        "key": "87788520120-g9l6nv4c7n1s0cksbg63nvgeoa3c19gu.apps.googleusercontent.com",
-        "secret": "KFbg7cw317tCkCAiW4tpgfpZ",
+        "key": "",
+        "secret": "",
         "scope": [
           "email",
           "profile",
