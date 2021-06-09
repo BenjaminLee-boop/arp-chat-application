@@ -1,0 +1,48 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "/k6xmUf9Ewfvs+x9JIWd1khHVqc=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "http://localhost:3000/",
+      "google": {
+        "key": "87788520120-1vqqen751m3b830ajqd8tbf4sser0dlk.apps.googleusercontent.com",
+        "secret": "CBnVNWD_9lehFt7I2_p7nU4D",
+        "scope": [
+          "email",
+          "profile",
+          "openid"
+        ]
+      },
+      "github": {
+        "key": "<github oauth key>",
+        "secret": "<github oauth secret>"
+      }
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/reachat"
+}
