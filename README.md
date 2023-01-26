@@ -1,1 +1,1 @@
-# arp-chat-application
+# chat-application
